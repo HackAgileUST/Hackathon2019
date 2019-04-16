@@ -41,19 +41,14 @@ $(document).ready(function(){
         switch (color) {
             case 'blue':
                 return 'btn-info';
-                break;
             case 'orange':
                 return 'btn-warning';
-                break;
             case 'purple':
                 return 'btn-primary';
-                break;
             case 'red':
                 return 'btn-danger';
-                break;
             case 'green':
                 return 'btn-success';
-                break;
         }
     }
 });

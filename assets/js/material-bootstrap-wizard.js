@@ -1,43 +1,43 @@
-/*! =========================================================
- *
- * Material Bootstrap Wizard - V1.0.1
- *
- * =========================================================
- *
- * Copyright 2016 Creative Tim (http://www.creative-tim.com/product/material-bootstrap-wizard)
- *
- *
- *                       _oo0oo_
- *                      o8888888o
- *                      88" . "88
- *                      (| -_- |)
- *                      0\  =  /0
- *                    ___/`---'\___
- *                  .' \|     |// '.
- *                 / \|||  :  |||// \
- *                / _||||| -:- |||||- \
- *               |   | \\  -  /// |   |
- *               | \_|  ''\---/''  |_/ |
- *               \  .-\__  '-'  ___/-. /
- *             ___'. .'  /--.--\  `. .'___
- *          ."" '<  `.___\_<|>_/___.' >' "".
- *         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *         \  \ `_.   \_ __\ /__ _/   .-` /  /
- *     =====`-.____`.___ \_____/___.-`___.-'=====
- *                       `=---='
- *
- *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *
- *               Buddha Bless:  "No Bugs"
- *
- * ========================================================= */
-
-// Material Bootstrap Wizard Functions
-
 searchVisible = 0;
 transparent = true;
 
+function LoadExcel(){
+    alert('Load Excel');
+}
+
 $(document).ready(function(){
+    
+    $('#cbxSource').change(function(){
+
+        $('#sourceSelection').empty();
+
+        let innerHtml;
+
+        switch (this.value) {
+            case "Trello":
+            case "Jira":
+            case "Kanban":
+                innerHtml = '<div class="input-group">' +
+                                '<span class="input-group-addon">' +
+                                    '<i class="material-icons">business</i>' +
+                                '</span>' +
+                                '<div class="form-group label-floating">' +
+                                    '<label class="control-label">Url Project:</label>' +
+                                    '<input name="name" type="text" class="form-control">' +
+                                '</div>' +
+                            '</div>';
+                break;
+
+            case "Excel":
+                innerHtml = "<input onclick='LoadExcel();' type='button' class='btn-next btn-fill btn-danger btn-wd' name='Load Excel' value='Load Excel' />";
+                break;
+        
+            default:
+                break;
+        }
+
+        $('#sourceSelection').html(innerHtml);
+    });
 
     $.material.init();
 
