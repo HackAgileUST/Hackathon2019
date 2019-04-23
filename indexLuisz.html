@@ -79,7 +79,7 @@
 												<label>Dashboard:</label>
 												<div class="checkbox" style="overflow-y:scroll; height:100px;">
 													<label>
-														<input type="checkbox" name="optionsCheckboxes" checked>
+														<input type="checkbox" name="optionsCheckboxes">
 														DashBoard 1   
 													</label>
 													<label>
@@ -114,32 +114,13 @@
 		                                	</div>
 											<div class="col-sm-5">
 												<label class="control-label">Account Name:</label>
-												<div class="checkbox" style="overflow-y:scroll; height:100px;">
-													<label>
-														<input type="checkbox" name="optionsCheckboxes" checked>
-														DashBoard 1   
-													</label>
-													<label>
-														<input type="checkbox" name="optionsCheckboxes" >
-														DashBoard 2
-													</label>
-													<label>
-														<input type="checkbox" name="optionsCheckboxes" >
-														DashBoard 3
-													</label>
-													<label>
-														<input type="checkbox" name="optionsCheckboxes" >
-														DashBoard 4
-													</label>
-													<label>
-														<input type="checkbox" name="optionsCheckboxes" >
-														DashBoard 5
-													</label>
+												<div id="divLabels" style="overflow-y:scroll; height:100px;">
+													
 												</div>
 												<label class="control-label">Account Name:</label>
-												<div class="checkbox" style="overflow-y:scroll; height:100px;">
+												<div id="divParameters" class="checkbox" style="overflow-y:scroll; height:100px;">
 													<label>
-														<input type="checkbox" name="optionsCheckboxes" checked>
+														<input type="checkbox" name="optionsCheckboxes">
 														DashBoard 1   
 													</label>
 													<label>
@@ -199,4 +180,25 @@
 
 	<!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
 	<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('#divParameters input:checkbox').on('change',function(){
+				var nodeText = this.parentNode.outerText.replace(' ','');
+
+				if(this.checked) {
+					if($('label[name="' + nodeText +'"]').length === 0){
+						$('#divLabels').append('<label style="width:300px;" name="' + nodeText + '">' + nodeText + '</label>');
+					}
+				} else {
+					$('label[name="' + nodeText +'"]').detach();
+				}
+
+
+			});
+
+			
+		});
+	</script>
+
 </html>
