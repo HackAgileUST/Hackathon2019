@@ -84,7 +84,7 @@
 			                            <!-- <li><a href="#general" data-toggle="tab">Dashboard</a></li> -->
 			                            <li><a href="#dataSource" data-toggle="tab">Data Source</a></li>
 			                            <li><a href="#mapping" data-toggle="tab">Mapping</a></li>
-                                        <li><a href="#graphics" data-toggle="tab">Graphics</a></li>
+                                        <li><a href="#graphics" data-toggle="tab">Chart Publish</a></li>
 			                        </ul>
 								</div>
 
@@ -113,7 +113,7 @@
                                                     <!-- <span class="input-group-addon"> -->
                                                         <!-- <i class="material-icons">business</i> -->
                                                     <!-- </span> -->
-                                                    <!-- <!-- <label>Select the customer scope:</label> --> -->
+                                                    <!-- <!-- <label>Select the customer scope:</label> -->
                                                     <!-- <div class="form-group label-floating"> -->
                                                         <!-- <select id="cbxSource" disabled="false" class="form-control" multiple> -->
                                                             <!-- <option value="Coppel">Coppel</option> -->
@@ -126,7 +126,7 @@
                                                     <!-- <span class="input-group-addon"> -->
                                                         <!-- <i class="material-icons">bookmark</i> -->
                                                     <!-- </span> -->
-                                                    <!-- <!-- <label>Select the project scope:</label> --> -->
+                                                    <!-- <!-- <label>Select the project scope:</label> --> 
                                                     <!-- <div class="form-group label-floating"> -->
                                                         <!-- <select id="cbxSource" disabled="false" class="form-control" multiple> -->
                                                             <!-- <option value="Aztec">Aztec</option> -->
@@ -165,87 +165,117 @@
 		                            </div>
 		                            <div class="tab-pane" id="mapping">
 		                                <div class="row">
-		                                    <h4 class="info-text"> Select the fields to associate.</h4>
-		                                    <div class="col-sm-4 col-sm-offset-1">
-												<label>From  Data Source </label>
+		                                    <!-- <h4 class="info-text"> Select the fields to associate.</h4> -->
+		                                    <!-- <div class="col-sm-4 col-sm-offset-1"> -->
+												<!-- <label>From  Data Source </label> -->
 		                                            
-	                                    		<div class="form-group">
-													<div class="textarea">
-														<div class="checkbox" style="overflow-y:scroll; heigth:20px;">
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">Sprint
-																</label>
-															</div> 
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">Velocity
-																</label>
-															</div> 
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">Planning
-																</label>
-															</div>
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">Sprint Commitment
-																</label>
-															</div>
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">UserStory
-																</label>
-															</div>
-															<div class="checkbox">
-																<label>
-																	<input type="checkbox" name="optionsCheckboxes">StoryPoint
-																</label>
-															</div>
-														</div>
-											        </div>
-		                                        </div>
-		                                    </div>
+	                                    		<!-- <div class="form-group"> -->
+													<!-- <div class="textarea"> -->
+														<!-- <div class="checkbox" style="overflow-y:scroll; heigth:20px;"> -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">Sprint -->
+																<!-- </label> -->
+															<!-- </div>  -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">Velocity -->
+																<!-- </label> -->
+															<!-- </div>  -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">Planning -->
+																<!-- </label> -->
+															<!-- </div> -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">Sprint Commitment -->
+																<!-- </label> -->
+															<!-- </div> -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">UserStory -->
+																<!-- </label> -->
+															<!-- </div> -->
+															<!-- <div class="checkbox"> -->
+																<!-- <label> -->
+																	<!-- <input type="checkbox" name="optionsCheckboxes">StoryPoint -->
+																<!-- </label> -->
+															<!-- </div> -->
+														<!-- </div> -->
+											        <!-- </div> -->
+		                                        <!-- </div> -->
+		                                    <!-- </div> -->
 											
 											<!-- <div class="col-sm-3"> -->
 												<!-- <button class="btn btn-danger btn-xs" onclick="Associate()" >Associate</button> -->
 												<!-- <button class="btn btn-danger btn-xs">Disassociate</button> -->
 		                                	<!-- </div> -->
 
-		                                    <div class="col-sm-3">
+		                                    <div class="col-sm-8 col-sm-offset-2">
 												<label>Entity Destination </label>
-													<div class="checkbox" style="overflow-y:scroll; heigth:20px;">
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">Sprint
-															</label>
-														</div> 
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">Velocity
-															</label>
-														</div> 
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">Planning
-															</label>
-														</div>
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">Sprint Commitment
-															</label>
-														</div>
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">UserStory
-															</label>
-														</div>
-														<div class="checkbox">
-															<label>
-																<input type="checkbox" name="optionsCheckboxes">StoryPoint
-															</label>
-														</div>
-													</div>
+												<table id="miaTabla" class="mitabla order-list">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Field Sourcing</td>
+                                                            <td>Field Destination</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="col-sm-4">
+                                                                <!-- <input type="text" name="name" class="form-control" /> -->
+                                                            </td>
+                                                            <td class="col-sm-4">
+                                                                <!--<input type="" name="type" class="form-control" />-->
+                                                                <!-- <select type="text" name="type" class="form-control" id="fillDropField"></select> -->
+                                                            </td>
+                                                            <td class="col-sm-2">
+                                                                <a class="deleteRowField"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="5" style="text-align: left;">
+                                                                <!-- <input type="button" class="btn btn-lg btn-block " id="addrowField" value="Add Row" /> -->
+                                                            </td>
+                                                        </tr>
+                                                        <tr></tr>
+                                                    </tfoot>
+                                                </table>
+													<!-- <div class="checkbox" style="overflow-y:scroll; heigth:20px;"> -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">Sprint -->
+															<!-- </label> -->
+														<!-- </div>  -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">Velocity -->
+															<!-- </label> -->
+														<!-- </div>  -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">Planning -->
+															<!-- </label> -->
+														<!-- </div> -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">Sprint Commitment -->
+															<!-- </label> -->
+														<!-- </div> -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">UserStory -->
+															<!-- </label> -->
+														<!-- </div> -->
+														<!-- <div class="checkbox"> -->
+															<!-- <label> -->
+																<!-- <input type="checkbox" name="optionsCheckboxes">StoryPoint -->
+															<!-- </label> -->
+														<!-- </div> -->
+													<!-- </div> -->
 		                                        </div>
 		                                	</div>
 
@@ -270,8 +300,7 @@
 		        </div>
 	    	</div> <!-- row -->
 		</div> <!--  big container -->
-</body>
-	<!--   Core JS Files   -->
+		<!--   Core JS Files   -->
 	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
@@ -279,7 +308,10 @@
 	<!--  Plugin for the Wizard -->
 	<script src="assets/js/demo.js" type="text/javascript"></script>
 	<script src="assets/js/material-bootstrap-wizard.js" type="text/javascript"></script>
+	<script src="assets/js/parameters.js" type="text/javascript"></script>
 
 	<!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
 	<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+</body>
+	
 </html>
