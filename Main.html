@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Agile Metrics Integrator</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+  
 </head>
 
 <body>
@@ -31,18 +31,28 @@
             </div>
 
             <div class="sidebar-header">
-                <h3>Choose an option</h3>
+                <h3></h3>
             </div>
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#opt1Submenu" data-toggle="collapse" aria-expanded="false">Management</a>
+                    <a href="#opt1Submenu" data-toggle="collapse" aria-expanded="false">Administration</a>
                     <ul class="collapse list-unstyled" id="opt1Submenu">
                         <li>
-                            <a href="#">New Configuration</a>
+                            <a href="#">Customers</a>
                         </li>
                         <li>
-                            <a href="#">Edit Configuration</a>
+                            <a href="#">Roles</a>
+                        </li>
+						 <li>
+                            <a href="#">Data sources</a>
+                        </li>
+							 <li>
+                            <a href="#">Export configuration</a>
+                        </li>
+						</li>
+							 <li>
+                            <a href="#">Wizard Admin</a>
                         </li>
                     </ul>
                 </li>
@@ -50,46 +60,57 @@
                     <a href="#opt2Submenu" data-toggle="collapse" aria-expanded="false">Dashboard</a>
                     <ul class="collapse list-unstyled" id="opt2Submenu">
                         <li>
-                            <a href="#">New</a>
+                            <a href="WizardAdmin.html">New</a>
                         </li>
                         <li>
                             <a href="#">Edit</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#opt3Submenu" data-toggle="collapse" aria-expanded="false">Data Source</a>
+				<li>
+                    <a href="#opt3Submenu" data-toggle="collapse" aria-expanded="false">Charts</a>
                     <ul class="collapse list-unstyled" id="opt3Submenu">
                         <li>
-                            <a href="#">New</a>
+                            <a href="AdminMenu.html">New</a>
                         </li>
                         <li>
                             <a href="#">Edit</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#opt4Submenu" data-toggle="collapse" aria-expanded="false">Data Mapping</a>
-                    <ul class="collapse list-unstyled" id="opt4Submenu">
-                        <li>
-                            <a href="#">New</a>
-                        </li>
-                        <li>
-                            <a href="#">Edit</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#opt5Submenu" data-toggle="collapse" aria-expanded="false">Chart</a>
-                    <ul class="collapse list-unstyled" id="opt5Submenu">
-                        <li>
-                            <a href="#">New</a>
-                        </li>
-                        <li>
-                            <a href="#">Edit</a>
-                        </li>
-                    </ul>
-                </li>
+                <!-- <li> -->
+                    <!-- <a href="#opt3Submenu" data-toggle="collapse" aria-expanded="false">Data Source</a> -->
+                    <!-- <ul class="collapse list-unstyled" id="opt3Submenu"> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">New</a> -->
+                        <!-- </li> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">Edit</a> -->
+                        <!-- </li> -->
+                    <!-- </ul> -->
+                <!-- </li> -->
+                <!-- <li> -->
+                    <!-- <a href="#opt4Submenu" data-toggle="collapse" aria-expanded="false">Data Mapping</a> -->
+                    <!-- <ul class="collapse list-unstyled" id="opt4Submenu"> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">New</a> -->
+                        <!-- </li> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">Edit</a> -->
+                        <!-- </li> -->
+                    <!-- </ul> -->
+                <!-- </li> -->
+                <!-- <li> -->
+                    <!-- <a href="#opt5Submenu" data-toggle="collapse" aria-expanded="false">Chart</a> -->
+                    <!-- <ul class="collapse list-unstyled" id="opt5Submenu"> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">New</a> -->
+                        <!-- </li> -->
+                        <!-- <li> -->
+                            <!-- <a href="#">Edit</a> -->
+                        <!-- </li> -->
+                    <!-- </ul> -->
+                <!-- </li> -->
             </ul>
 
         </nav>
@@ -100,30 +121,37 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-next btn-fill btn-danger btn-wd">
                         <i class="fas fa-align-left"></i>
-                        <span>Show Menu</span>
+                        
                     </button>
-                    
+
                     <div class="wizard-header">
-		                        	<h3 class="wizard-title">
-		                        		Agile Metrics Integrator
-		                        	</h3>
-		                    	</div>
-								<div class="wizard-navigation">
-									<ul>
-			                            <li><a href="#general" data-toggle="tab">Cotiviti Resonant</a></li>
-			                            <li><a href="#dataSource" data-toggle="tab">Cotiviti FWA</a></li>
-			                            <li><a href="#mapping" data-toggle="tab">Cotiviti Financial Health</a></li>
-			                        </ul>
-								</div>
+                        <h3 class="wizard-title">
+                            Agile Metrics Integrator
+                        </h3>
+                    </div>
+                    <div class="wizard-navigation">
+                        <ul>
+                            <li><a href="#general" data-toggle="tab">Cotiviti Resonant</a></li>
+                            <li><a href="#dataSource" data-toggle="tab">Cotiviti FWA</a></li>
+                            <li><a href="#mapping" data-toggle="tab">Cotiviti Financial Health</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
+
+            <!--Contenido Wizard ini-->
+            <iframe src="MainDashboard.html" height="1500" width="1300" frameborder="0" ></iframe> 
+            <!--Contenido Wizard fin-->
+
+
+
+
         </div>
     </div>
 
     <div class="overlay"></div>
-
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
