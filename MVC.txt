@@ -1,0 +1,15 @@
+
+Hi Team
+How already know. MVC is a one of the famous design patterns for developing web applications, websites and web pages.
+
+We choose to develop in MVC for this component, because all team members we need work simultaneously on the model, controller and views. this because of the short time for to develop.
+Also we needed the separation of responsibilities, future development or modification is easier scalability of the product is increased.
+
+We can to mention some adventages of the mvc pattern: Faster development process,  Ability to provide multiple views, Support for asynchronous technique, odification does not affect the entire model.
+
+We separate the funcionality according to our needs.
+for example how they can see. 
+
+initially our model is composed... in this part we can explaint the structure
+
+
